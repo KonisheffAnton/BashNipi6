@@ -30,9 +30,9 @@ namespace BashNipi6.Controllers
             return await db.objectBs.ToListAsync();
 
         }
-        
-           
-                [HttpGet("{idGet}")]
+
+        //api/objectBs/idGet
+        [HttpGet("{idGet}")]
                 public async Task<ActionResult<IEnumerable<objectB>>> Get(int idGet)
                     {
                         objectB objectb = await db.objectBs.FirstOrDefaultAsync(x => x.Id == idGet);

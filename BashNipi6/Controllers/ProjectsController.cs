@@ -31,7 +31,7 @@ namespace BashNipi6.Controllers
 
         }
 
-      
+      //api/Projects/idGet
         [HttpGet("{idGet}")]
         public async Task<ActionResult<Project>> Get(int idGet)
             {
@@ -40,9 +40,9 @@ namespace BashNipi6.Controllers
                    return NotFound();
                 return new ObjectResult(project);
             }
-        
-          
-            [HttpPost]
+
+        //дату создания и редактирования вводить необязательно
+        [HttpPost]
             public async Task<ActionResult<Project>> Post(Project project)
             {
                 if (project == null)
